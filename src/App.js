@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import MovieCardsList from './MovieCardsList';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import MovieCardsList from './MovieCardsList'
 
 const profiles = [
   {
@@ -34,7 +34,7 @@ const profiles = [
     userID: '6',
     favoriteMovieID: '4',
   },
-];
+]
 
 const users = {
   1: {
@@ -67,7 +67,7 @@ const users = {
     name: 'Nicholas Lain',
     userName: 'user123',
   },
-};
+}
 
 const movies = {
   1: {
@@ -90,21 +90,19 @@ const movies = {
     id: 5,
     name: 'Get Out',
   },
-};
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">ReactND - Coding Practice</h1>
-        </header>
-        <h1>How Popular is Your Favorite Movie?</h1>
-        <MovieCardsList profiles={profiles} movies={movies} users={users} />
-      </div>
-    );
-  }
 }
 
-export default App;
+const App = () => {
+  return (
+    <div>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="App-title">ReactND - Coding Practice</h1>
+      </header>
+      <h1>How Popular is Your Favorite Movie?</h1>
+      <MovieCardsList profiles={profiles} movies={movies} users={users} />
+    </div>
+  )
+}
+
+export default App
